@@ -16,12 +16,31 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+  // print out the first row of the array
+  // print all the rows in the array
+  // change each row to a string
+  // loop through the string and make a template literal from it to look like this   X  |     |
+  let rowToString = "";
+  let newString = "";
+  for (let row of board) {
+    rowToString = row.toString();
+    newString = rowToString.split(",").join(" | ");
+    
+  }
+  return newString;
 }
+
+let board = [
+  ["X", "_", "_"],
+  ["_", "X", "_"],
+  ["O", "O", "X"],
+];
+
+printBoard(board);
 
 /*
     Given a tic-tac-toe board (an array of arrays),
         - return true if there are no moves left to make (there are no more '_' values)
         - return false if there are still moves that can be made
 */
-export function checkIfNoMovesLeft(board) {
-}
+export function checkIfNoMovesLeft(board) {}
