@@ -22,10 +22,23 @@ export function printBoard(board) {
   // loop through the string and make a template literal from it to look like this   X  |     |
   let rowToString = "";
   let newString = "";
-  for (let row of board) {
-    rowToString = row.toString();
-    newString = rowToString.split(",").join(" | ");
-    
+
+  for (let i = 0; i < board.length; i++) {
+    if (i === board.length - 1) {
+      rowToString = board[i]
+        .toString()
+        .split(",")
+        .join("  |  ")
+        .replaceAll("_", " ");
+      newString += `  ${rowToString}\n=================`;
+    } else {
+      rowToString = board[i]
+        .toString()
+        .split(",")
+        .join("  |  ")
+        .replaceAll("_", " ");
+      newString += `  ${rowToString}\n=================\n`;
+    }
   }
   return newString;
 }
