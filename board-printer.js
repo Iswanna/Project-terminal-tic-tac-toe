@@ -43,14 +43,6 @@ export function printBoard(board) {
   return newString;
 }
 
-let board = [
-  ["X", "_", "_"],
-  ["_", "X", "_"],
-  ["O", "O", "X"],
-];
-
-printBoard(board);
-
 /*
     Given a tic-tac-toe board (an array of arrays),
         - return true if there are no moves left to make (there are no more '_' values)
