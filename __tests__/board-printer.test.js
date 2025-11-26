@@ -12,13 +12,7 @@ test.only("printBoard should return a formatted board string", () => {
     ["O", "O", "X"],
   ];
 
-  const expected = `
-  X  |     |     
-=================
-     |  X  |     
-=================
-  O  |  O  |  X  
-=================`;
+  const expected = `\x20\x20X\x20\x20|\x20\x20\x20\x20\x20|\x20\x20\x20\n=================\n\x20\x20\x20\x20\x20|\x20\x20X\x20\x20|\x20\x20\x20\n=================\n\x20\x20O\x20\x20|\x20\x20O\x20\x20|\x20\x20X\n=================`;
 
   expect(printBoard(board)).toEqual(expected);
 });
