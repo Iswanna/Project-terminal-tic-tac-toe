@@ -16,28 +16,13 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
-  // print out the first row of the array
-  // print all the rows in the array
-  // change each row to a string
-  // loop through the string and make a template literal from it to look like this   X  |     |
-  let rowToString = "";
   let newString = "";
 
   for (let i = 0; i < board.length; i++) {
-    if (i === board.length - 1) {
-      rowToString = board[i]
-        .toString()
-        .split(",")
-        .join("  |  ")
-        .replaceAll("_", " ");
-      newString += `  ${rowToString}\n=================`;
-    } else {
-      rowToString = board[i]
-        .toString()
-        .split(",")
-        .join("  |  ")
-        .replaceAll("_", " ");
-      newString += `  ${rowToString}\n=================\n`;
+    const rowToString = board[i].join("  |  ").replaceAll("_", " ");
+    newString += `  ${rowToString}\n=================`;
+    if (i < board.length - 1) {
+      newString += "\n";
     }
   }
   return newString;
