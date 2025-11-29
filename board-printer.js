@@ -33,4 +33,16 @@ export function printBoard(board) {
         - return true if there are no moves left to make (there are no more '_' values)
         - return false if there are still moves that can be made
 */
-export function checkIfNoMovesLeft(board) {}
+
+// pseudocode
+// loop through the elements of the array
+// loop through each item of the element
+// if non of the item  is "_", return true
+let result = [];
+export function checkIfNoMovesLeft(board) {
+  for (const ele of board) {
+  result.push(ele.indexOf("_") === -1);
+  }
+  return result.every((element => element === true));
+}
+
