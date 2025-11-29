@@ -5,7 +5,7 @@ test("checkIfNoMovesLeft should return true if there are no moves left", () => {
   expect(checkIfNoMovesLeft(board)).toBe(true);
 });
 
-test.only("printBoard should return a formatted board string", () => {
+test("printBoard should return a formatted board string", () => {
   const board = [
     ["X", "_", "_"],
     ["_", "X", "_"],
